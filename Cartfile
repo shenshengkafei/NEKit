@@ -1,7 +1,8 @@
 github "robbiehanson/CocoaAsyncSocket" ~> 7.6.3
-github "CocoaLumberjack/CocoaLumberjack" ~> 3.4.2
+github "CocoaLumberjack/CocoaLumberjack" ~> 3.5.2
+github "lexrus/MMDB-Swift" "0.3.0"
 github "zhuhaow/Sodium-framework" "v1.0.10.1"
 github "behrang/YamlSwift" "3.4.3"
-github "JayZhao/tun2socks" "20b4099b5afe0390f04fb72dd2b84cb66fd3c287"
-github "zhuhaow/Resolver" ~> 0.1.3
-github "lexrus/MMDB-Swift" "0.2.9"
+github "shenshengkafei/tun2socks" ~> 7cda17c58623b25b846c16b789e6e531c2b3fd27
+github "zhuhaow/Resolver" ~> 0.2.0
+
