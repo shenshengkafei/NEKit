@@ -95,7 +95,15 @@ public class NWTCPSocket: NSObject, RawTCPSocketProtocol {
             checkStatus()
         }
     }
-
+    
+    func didDisconnect() {
+            queueCall {
+                let delegate = self.delegate
+                self.delegate = nil
+                delegate?.didDisconnectWith(socket: self)
+            }
+    }
+    
     /**
      Disconnect the socket immediately.
      */
@@ -311,7 +319,10 @@ public class NWTCPSocket: NSObject, RawTCPSocketProtocol {
     }
 
     private func cancel() {
+        connection?.removeObserver(self, forKeyPath: "state")
         connection?.cancel()
+        connection = nil
+        self.didDisconnect()
     }
 
     private func checkStatus() {
